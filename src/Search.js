@@ -8,7 +8,7 @@ class Search extends Component {
         super()
         
         this.state = {
-            songTitle: '',
+            songTitle: 'Mamma',
             showLyrics:[],         
         }
         this.handleChange = this.handleChange.bind(this);
@@ -16,12 +16,7 @@ class Search extends Component {
        
     }
     componentDidMount() {
-       axios
-       .get({https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.state.songTitle}&apikey=${process.env.REACT_APP_MM_KEY}})
-   
-    
-            .then(response => response.json())
-            .then(showLyrics => this.setState({showLyrics}))
+       this.dosearch();
     }         
             
     
@@ -35,6 +30,10 @@ class Search extends Component {
         event.preventDefault();
         
        console.log('working')
+       axios
+       .get(https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.state.songTitle}&apikey=${process.env.REACT_APP_MM_KEY})
+            .then(response => response.json())
+            .then(showLyrics => this.setState({showLyrics}))
                   
     }
     
