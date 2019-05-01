@@ -1,56 +1,67 @@
-import React, {Component} from "react"
-import axios from 'axios'
+import React, {Component} from 'react';
+import axios from 'axios';
+
 
 class Search extends Component {
-     
-    constructor(props) {
-        super(props);
-        this.state = {
-            loading: false,
-            songTitle: ""
-        };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
     
-    componentDidMount() {   
-        this.setState({loading: true})
-        axios.get(`http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${
-          this.state.songTitle}&apikey=${process.env.REACT_APP_MM_KEY}`
-      )
-            .then(response => response.json())
-            .then(data => console.log(data))
-            
+    constructor() {
+        super()
+        
+        this.state = {
+            songTitle: '',
+            showLyrics:[],         
+        }
+        this.handleChange = this.handleChange.bind(this);
+        this.doSearch = this.doSearch.bind(this);
+       
     }
+    componentDidMount() {
+       axios
+       .get({https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.state.songTitle}&apikey=${process.env.REACT_APP_MM_KEY}})
+   
+    
+            .then(response => response.json())
+            .then(showLyrics => this.setState({showLyrics}))
+    }         
+            
+    
     
     handleChange(event){
         const {name, value} = event.target;
         this.setState({ [name]: value });
     }
-    handleSubmit(event){
+    
+    doSearch(event){
         event.preventDefault();
-        console.log('I was triggered during submit');
+        
+       console.log('working')
+                  
     }
     
     render() {
-        return (
+        return(
             <div>
-                <form className="search-form" onSubmit={this.handleSubmit}>
+                <form className = "search-form" onSubmit={this.doSearch}>
                     <input 
-                        name="songTitle"   
+                        type="text"
                         value={this.state.songTitle}
+                        name="songTitle"
                         onChange={this.handleChange}
                         placeholder="Song title"
                     /> 
                     <br />
                     
                     <button>Search</button>
-            
+                    
+                    
+
                 </form>
-            
+               <div><h2>{this.state.showLyrics}</h2></div>
             </div>
         );
     }
-
 }
-export default Search
+
+
+
+export default Search;
