@@ -80,7 +80,13 @@ body {
     background: bule;
   }
 }
+<<<<<<< HEAD
 
+=======
+h2 {
+  margin-top: 70px;
+}
+>>>>>>> parent of 8297dab... v6
 button {
   background-color: black;
   border: none;
