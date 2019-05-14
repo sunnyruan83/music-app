@@ -69,7 +69,7 @@ class Search extends Component {
 
           <button>Search</button>
         </form>
-        
+        <div>
           <h2>
             <div>
               {this.state.showLyrics
