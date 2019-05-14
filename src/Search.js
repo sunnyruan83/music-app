@@ -70,6 +70,16 @@ class Search extends Component {
           <button>Search</button>
         </form>
         <div>
+          <div className="musicwave">
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
           <h2>
             <div>
               {this.state.showLyrics

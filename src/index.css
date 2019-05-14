@@ -12,7 +12,7 @@ body {
   position: absolute;
   top: 40%;
   left: 48.5%;
-  margin-top: 10px;
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -80,7 +80,9 @@ body {
     background: bule;
   }
 }
-
+h2 {
+  margin-top: 70px;
+}
 button {
   background-color: black;
   border: none;
@@ -90,7 +92,8 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  margin: 4px 2px;
+  margin-top: 10px;
+  margin-bottom: 100px;
   cursor: pointer;
   border-radius: 12px;
 }
