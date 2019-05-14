@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+.musicwave {
+  position: absolute;
+  top: 40%;
+  left: 48.5%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.musicwave span {
+  width: 5px;
+  height: 10px;
+  bottom: 0px;
+  position: absolute;
+  background: #83e28f;
+  -webkit-animation: bodong 0.5s infinite ease;
+}
+
+.musicwave span:first-child {
+  left: 0px;
+  -webkit-animation-delay: 0.3s;
+}
+
+.musicwave span:nth-child(2) {
+  left: 7px;
+  -webkit-animation-delay: 0.4s;
+}
+.musicwave span:nth-child(3) {
+  left: 14px;
+  -webkit-animation-delay: 0.6s;
+}
+.musicwave span:nth-child(4) {
+  left: 21px;
+  -webkit-animation-delay: 0.8s;
+}
+.musicwave span:nth-child(5) {
+  left: 28px;
+  -webkit-animation-delay: 1s;
+}
+.musicwave span:nth-child(6) {
+  left: 35px;
+  -webkit-animation-delay: 1.2s;
+}
+.musicwave span:nth-child(7) {
+  left: 42px;
+  -webkit-animation-delay: 1.4s;
+}
+.musicwave span:nth-child(8) {
+  left: 50px;
+  -webkit-animation-delay: 1.6s;
+}
+@-webkit-keyframes bodong {
+  0% {
+    height: 10px;
+    background: bule;
+  }
+  30% {
+    height: 20px;
+    background: bule;
+  }
+  60% {
+    height: 25px;
+    background: bule;
+  }
+  80% {
+    height: 20px;
+    background: bule;
+  }
+  100% {
+    height: 10px;
+    background: bule;
+  }
+}
+
+button {
+  background-color: black;
+  border: none;
+  color: #83e28f;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+button:hover {
+  border-color: rgba(255, 255, 255, 1);
+}
+input {
+  padding: 12px 20px;
+  margin: 4px 2px;
+  box-sizing: border-box;
+  font-size: 20px;
+  border: 3px solid black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  text-align: center;
+}
+input:focus {
+  border: 3px solid #83e28f;
+}
+a {
+  color: black;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
