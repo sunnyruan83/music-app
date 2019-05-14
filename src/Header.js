@@ -14,7 +14,6 @@ const Header = () => {
         <span />
         <span />
         <span />
-        <span />
       </div>
     </nav>
   );
