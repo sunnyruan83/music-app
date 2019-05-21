@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-
 const BASE_URL =
   "https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1";
 class Search extends Component {
@@ -69,7 +68,7 @@ class Search extends Component {
 
           <button>Search</button>
         </form>
-        
+        <div>
           <h2>
             <div>
               {this.state.showLyrics

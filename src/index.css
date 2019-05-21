@@ -8,11 +8,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
 .musicwave {
   position: absolute;
   top: 40%;
   left: 48.5%;
-  margin-top: 10px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -80,13 +81,10 @@ body {
     background: bule;
   }
 }
-<<<<<<< HEAD
-
-=======
 h2 {
-  margin-top: 70px;
+  margin-top: 100px;
 }
->>>>>>> parent of 8297dab... v6
+
 button {
   background-color: black;
   border: none;
@@ -96,7 +94,8 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  margin: 4px 2px;
+  margin-top: 70px;
+  margin-bottom: 100px;
   cursor: pointer;
   border-radius: 12px;
 }
@@ -123,4 +122,13 @@ a {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@media (max-width: 576px) {
+  h2 {
+    margin-top: 20px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
